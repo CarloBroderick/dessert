@@ -23,6 +23,7 @@ dessert_listing_lower <- dessert_listing |>
 our_desserts_lower <- our_desserts |>
   mutate(dessert = Favorite_dessert)
 
+our_desserts_lower$dessert[2] <- "cheesecake"
 
 desserts_match <- inner_join(dessert_listing_lower, our_desserts_lower, by = "dessert")
 
